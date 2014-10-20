@@ -17,7 +17,10 @@
 	<form action="index.php" method="post">
 		<div class="form_field">
 			<div class="form_message">
-				<?php echo $usernameMessage; ?>
+				<?php if ($isSubmitted){
+					echo $usernameMessage;
+				}
+				?>
 			</div>
 		<span>Kasutajanimi:</span>
 			<input type="text" name="username">

@@ -1,11 +1,18 @@
 <?php
+	$isSubmitted = isset($_POST["submit"]);
+	
+	if ($isSubmitted){
+		$username = $_POST['username'];
+	}
+	
 	if (isset($_POST["submit"])) {
 		$username = $_POST["username"];
 	}
+	
 	if (!isset($username) || $username ==""){
-	 	$usernameMessage = "Palun sisesta kasutajanimi";
+	 	$usernameMessage = '<div class="form_message">Palun sisesta kasutajanimi</div>';
 	 } else {
-	 	$usernameMessage = "Kasutajanimi sobis";
+	 	$usernameMessage = '<div class="form_message">Kasutajanimi sobis</div>';
 
 	 }
  ?>
